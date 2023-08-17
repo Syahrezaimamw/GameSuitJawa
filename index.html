@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>SUIT JAWA</title>
+        
+    </head>
+    <body>
+        <script >
+        
+            var tanya= true
+            while(tanya){
+                
+                var input = prompt("masukan inputan berupa: gajah,semut,dan orang")
+                
+                var comp = Math.random();
+                
+                if(comp < 0.34 ){
+                    comp = 'gajah'
+                }else if(comp >= 0.34 && comp < 0.67){
+                    comp= 'orang'
+                }else if(comp >0.67){
+                    comp='semut'
+                }else{
+                    comp = 'ngambek'
+                }
+                
+                var hasil='';
+                
+                if (input == comp){
+                    hasil='SERI';
+                    
+                }else if (input == 'gajah'){
+                    hasil = (comp == 'semut') ? 'KALAH' : 'MENANG';
+                    
+                }else if(input == 'orang'){
+                    hasil =(comp == 'gajah') ? 'KALAH' : 'MENANG';
+                    
+                }else if (input == 'semut'){
+                    hasil = (comp == 'orang') ? 'KALAH ' : 'MENANG';
+                    
+                }else {
+                    hasil='inputan yang kamu masukan salah,masukan inputan berupa gajah,semut,atau orang';
+                }
+                
+                alert(`kamu memilih: ${input}` + `\ndan komputer memilih: ${comp}` + `\n Maka kamu: ${hasil}`);
+                
+                tanya = confirm('ingin bermain lagi ?');
+            }
+            alert('makasih sudah bermain.');
+            
+        </script>
+    </body>
+</html>
+
